@@ -39,17 +39,33 @@ class DashboardActivity : AppCompatActivity() {
                     response: Response<DashboardResponse>
                 ) {
                     if (response.isSuccessful) {
-                        // Replace this line with the response that matches your album data structure
-                        entities = response.body()?.entities ?: emptyList()
+                        // Fetching the response and converting it to a list of entities
+                        entities = response.body()?.entities?.map {
+                            Entity(
+                                artistName = it.artistName,
+                                albumTitle = it.albumTitle,
+                                releaseYear = it.releaseYear,
+                                genre = it.genre,
+                                trackCount = it.trackCount,
+                                description = it.description,
+                                popularTrack = it.popularTrack,
+                                imageResId = when (it.artistName) {
+                                    "Radiohead" -> R.drawable.radiohead
+                                    "Nirvana" -> R.drawable.nirvana
+                                    "Kendrick Lamar" -> R.drawable.kendrick
+                                    "Miles Davis" -> R.drawable.miles
+                                    "The Beatles" -> R.drawable.beatles
+                                    "Pink Floyd" -> R.drawable.floyd
+                                    "Portishead" -> R.drawable.portishead
+                                    else -> R.drawable.empty // Fallback image
+                                }
+                            )
+                        } ?: emptyList()
 
                         if (entities.isNotEmpty()) {
                             entityAdapter = EntityAdapter(entities) { entity ->
-                                val intent =
-                                    Intent(this@DashboardActivity, DetailsActivity::class.java)
-                                intent.putExtra(
-                                    "ENTITY",
-                                    entity
-                                )  // Pass the entity data to DetailsActivity
+                                val intent = Intent(this@DashboardActivity, DetailsActivity::class.java)
+                                intent.putExtra("ENTITY", entity)  // Pass the entity data to DetailsActivity
                                 startActivity(intent)
                             }
                             recyclerView.adapter = entityAdapter
@@ -79,5 +95,3 @@ class DashboardActivity : AppCompatActivity() {
             })
     }
 }
-
-//This is my project

@@ -2,6 +2,7 @@ package com.example.nit3213project
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +15,7 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var trackCountTextView: TextView
     private lateinit var descriptionTextView: TextView
     private lateinit var popularTrackTextView: TextView
+    private lateinit var entityImageView: ImageView // New ImageView for the entity image
     private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,10 +25,10 @@ class DetailsActivity : AppCompatActivity() {
         // Initialize the Toolbar
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)  // Show the back button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // Show the back button
         supportActionBar?.setDisplayShowTitleEnabled(false) // Remove the title
 
-        // Initialize the TextViews
+        // Initialize the TextViews and ImageView
         artistNameTextView = findViewById(R.id.artistNameTextView)
         albumTitleTextView = findViewById(R.id.albumTitleTextView)
         releaseYearTextView = findViewById(R.id.releaseYearTextView)
@@ -34,6 +36,7 @@ class DetailsActivity : AppCompatActivity() {
         trackCountTextView = findViewById(R.id.trackCountTextView)
         descriptionTextView = findViewById(R.id.descriptionTextView)
         popularTrackTextView = findViewById(R.id.popularTrackTextView)
+        entityImageView = findViewById(R.id.entityImageView) // Initialize the ImageView
 
         // Retrieve the Entity object from the intent
         val entity: Entity? = intent.getParcelableExtra("ENTITY")
@@ -47,6 +50,7 @@ class DetailsActivity : AppCompatActivity() {
             trackCountTextView.text = "Track Count: ${it.trackCount}"
             descriptionTextView.text = "Description: ${it.description}"
             popularTrackTextView.text = "Popular Track: ${it.popularTrack}"
+            entityImageView.setImageResource(it.imageResId) // Set the image resource for the entity
         }
     }
 

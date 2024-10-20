@@ -18,11 +18,11 @@
 
     <ImageView
         android:id="@+id/entityImageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:contentDescription="Entity Image"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Entity Image" />
 
 
     <TextView
