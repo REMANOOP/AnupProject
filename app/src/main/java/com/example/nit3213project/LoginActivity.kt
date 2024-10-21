@@ -6,11 +6,18 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var apiService: ApiService // Injecting ApiService using Hilt
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -27,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your username and password", Toast.LENGTH_SHORT).show()
             } else {
                 val loginRequest = LoginRequest(username, password)
-                RetrofitInstance.api.login(loginRequest).enqueue(object : Callback<LoginResponse> {
+                apiService.login(loginRequest).enqueue(object : Callback<LoginResponse> {
                     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                         if (response.isSuccessful) {
                             val keypass = response.body()?.keypass

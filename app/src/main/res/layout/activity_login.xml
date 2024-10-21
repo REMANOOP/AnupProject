@@ -5,25 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:scrollbars="horizontal">
+    android:scrollbars="vertical">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/realmusic" />
+        android:src="@drawable/realmusic"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-104dp" />
 
     <TextView
         android:id="@+id/loginTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
+        android:layout_marginTop="96dp"
         android:text="Login With Your Credentials"
         android:textColor="#FFFFFFFF"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
