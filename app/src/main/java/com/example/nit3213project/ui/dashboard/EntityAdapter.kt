@@ -1,4 +1,4 @@
-package com.example.nit3213project
+package com.example.nit3213project.ui.dashboard
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nit3213project.model.Entity
+import com.example.nit3213project.R
 
 class EntityAdapter(private val entities: List<Entity>, private val onClick: (Entity) -> Unit) :
     RecyclerView.Adapter<EntityAdapter.EntityViewHolder>() {

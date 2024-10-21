@@ -1,5 +1,8 @@
-package com.example.nit3213project
+package com.example.nit3213project.network
 
+import com.example.nit3213project.model.DashboardResponse
+import com.example.nit3213project.model.LoginRequest
+import com.example.nit3213project.model.LoginResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

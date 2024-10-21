@@ -1,4 +1,4 @@
-package com.example.nit3213project
+package com.example.nit3213project.ui.dashboard
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nit3213project.R
+import com.example.nit3213project.ui.details.DetailsActivity
+import com.example.nit3213project.ui.details.EntityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

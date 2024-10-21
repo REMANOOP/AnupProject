@@ -48,6 +48,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     // Retrofit and Gson for API calls
     implementation (libs.retrofit.v290)
     implementation (libs.retrofit2.converter.gson)
@@ -77,6 +78,21 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+    // Unit Testing
+
+    testImplementation(libs.mockito.core) // Updated to the latest version
+    testImplementation(libs.androidx.core.testing) // Updated to the latest version
+    testImplementation(libs.androidx.junit.v115) // Updated to the latest version
+    testImplementation(libs.androidx.core) // Updated to the latest version
+
+    // For ViewModel testing
+    testImplementation(libs.androidx.lifecycle.testing) // Updated to the latest version
+    testImplementation(libs.kotlinx.coroutines.test) // Updated to the latest version
+
+    // Mocking frameworks
+    testImplementation(libs.mockito.mockito.inline)
+    testImplementation(libs.androidx.espresso.core.v351)
 }
 kapt {
     correctErrorTypes = true // Ensure kapt handles error types correctly

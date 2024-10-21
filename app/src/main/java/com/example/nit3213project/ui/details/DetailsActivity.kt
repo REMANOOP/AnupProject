@@ -1,4 +1,4 @@
-package com.example.nit3213project
+package com.example.nit3213project.ui.details
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.nit3213project.model.Entity
+import com.example.nit3213project.R
 
 class DetailsActivity : AppCompatActivity() {
     private lateinit var artistNameTextView: TextView

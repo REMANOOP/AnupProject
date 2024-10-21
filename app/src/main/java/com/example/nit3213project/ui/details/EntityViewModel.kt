@@ -1,9 +1,13 @@
-package com.example.nit3213project
+package com.example.nit3213project.ui.details
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.nit3213project.model.DashboardResponse
+import com.example.nit3213project.model.Entity
+import com.example.nit3213project.R
+import com.example.nit3213project.network.ApiService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import retrofit2.Call

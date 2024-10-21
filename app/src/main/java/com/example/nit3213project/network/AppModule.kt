@@ -1,6 +1,4 @@
-package com.example.nit3213project.di
-
-import com.example.nit3213project.ApiService
+package com.example.nit3213project.network
 
 import dagger.Module
 import dagger.Provides
