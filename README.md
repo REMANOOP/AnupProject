@@ -17,10 +17,7 @@ The project follows MVVM (Model-View-ViewModel) architecture, utilizing Retrofit
 
 Setup Instructions
 Clone the Repository:
-
-bash
-Copy code
-git clone <repository-url>
+git clone <https://github.com/REMANOOP/AnupProject>
 Open in Android Studio: Import the project into Android Studio.
 
 Dependencies: Sync Gradle to download the required dependencies like Retrofit, Hilt, and others.
