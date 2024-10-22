@@ -1,9 +1,14 @@
+
+
 Music Album Dashboard - Android Application
 Overview
 This Android application is designed to showcase a dashboard of music albums with details such as artist name, album title, release year, genre, and more. Users can log in and view album details using Retrofit and Hilt for dependency injection.
 
 Features
 Login Screen: Users log in with credentials to access the dashboard.
+Username: anup
+password:s4680730
+
 Dashboard: Displays a list of music albums retrieved via an API.
 Album Details: Shows detailed information for each selected album.
 Dependency Injection: Implemented using Hilt.
@@ -12,10 +17,7 @@ The project follows MVVM (Model-View-ViewModel) architecture, utilizing Retrofit
 
 Setup Instructions
 Clone the Repository:
-
-bash
-Copy code
-git clone <repository-url>
+git clone <https://github.com/REMANOOP/AnupProject>
 Open in Android Studio: Import the project into Android Studio.
 
 Dependencies: Sync Gradle to download the required dependencies like Retrofit, Hilt, and others.
