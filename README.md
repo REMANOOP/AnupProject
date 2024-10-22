@@ -1,9 +1,14 @@
+
+
 Music Album Dashboard - Android Application
 Overview
 This Android application is designed to showcase a dashboard of music albums with details such as artist name, album title, release year, genre, and more. Users can log in and view album details using Retrofit and Hilt for dependency injection.
 
 Features
 Login Screen: Users log in with credentials to access the dashboard.
+Username: anup
+password:s4680730
+
 Dashboard: Displays a list of music albums retrieved via an API.
 Album Details: Shows detailed information for each selected album.
 Dependency Injection: Implemented using Hilt.
